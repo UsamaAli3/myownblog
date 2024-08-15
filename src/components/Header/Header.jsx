@@ -36,13 +36,16 @@ function Header() {
     <header className="p-2 border-4 bg-[#eece98]">
       <Container>
         <nav className="flex justify-between">
-          <div className="text-2xl font-bold"><Logo/></div>
+          <div className="text-2xl font-bold">
+            <Logo />
+          </div>
           <ul className="flex justify-end text-sm sm:text-base">
             {navItem.map((item) =>
               item.active ? (
                 <li key={item.name}>
                   <Button
-                    className="bg-[#d1b37f]"
+                    className="hover:bg-[#f9d08a] focus:bg-[#f9d08a] hover:text-black"
+                    bgColor="bg-[#d1b37f]"
                     onClick={() => navigate(item.slug)}
                   >
                     {item.name}
